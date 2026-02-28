@@ -2,31 +2,31 @@
 set -e
 
 echo "==> Applying Namespace..."
-kubectl apply -f .infrastructure/namespace.yml
+kubectl apply -f namespace.yml
 
 echo "==> Applying ConfigMap..."
-kubectl apply -f .infrastructure/confgiMap.yml
+kubectl apply -f configMap.yml
 
 echo "==> Applying Secret..."
-kubectl apply -f .infrastructure/secret.yml
+kubectl apply -f secret.yml
 
 echo "==> Applying PersistentVolume..."
-kubectl apply -f .infrastructure/pv.yml
+kubectl apply -f pv.yml
 
 echo "==> Applying PersistentVolumeClaim..."
-kubectl apply -f .infrastructure/pvc.yml
+kubectl apply -f pvc.yml
 
 echo "==> Applying Deployment..."
-kubectl apply -f .infrastructure/deployment.yml
+kubectl apply -f deployment.yml
 
 echo "==> Applying ClusterIP Service..."
-kubectl apply -f .infrastructure/clusterIp.yml
+kubectl apply -f clusterIp.yml
 
 echo "==> Applying NodePort Service..."
-kubectl apply -f .infrastructure/nodeport.yml
+kubectl apply -f nodeport.yml
 
 echo "==> Applying HorizontalPodAutoscaler..."
-kubectl apply -f .infrastructure/hpa.yml
+kubectl apply -f hpa.yml
 
 echo ""
 echo "==> All resources applied successfully!"
